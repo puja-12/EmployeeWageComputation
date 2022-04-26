@@ -11,7 +11,7 @@ namespace employeeWage
             while (true)
             {
                 Console.WriteLine("select number\n1)check present or bsent\n2)wage computation\n3) " +
-                    "part time wage compuatation\n4) using switch case\n ");
+                    "part time wage compuatation\n4) using switch case\n5 Monthlywage");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -31,10 +31,14 @@ namespace employeeWage
                         Parttimeemployee part = new Parttimeemployee();
                         part.partTime();
                         break;
-                        //using switch case
+                    //using switch case
                     case 4:
                         Usingswitchcase usingswitch = new Usingswitchcase();
                         usingswitch.switchCase();
+                        break;
+                    case 5:
+                        monthlyWage monthly = new monthlyWage();
+                        monthly.monthly();
                         break;
                 }
             }
