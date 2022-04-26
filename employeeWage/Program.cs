@@ -10,8 +10,8 @@ namespace employeeWage
             Console.WriteLine("Welcome to employee wage program!");
             while (true)
             {
-                Console.WriteLine("select number\n1)check present or bsent\n2)wage computation\n3) " +
-                    "part time wage compuatation\n4) using switch case\n5 Monthlywage\n)6 maxhrANDdays");
+                Console.WriteLine("select number\n1)check present or absent\n2)wage computation\n3) " +
+                    "part time wage compuatation\n4) using switch case\n5 Monthlywage\n)6 maxhrANDdays\n7 employee Wage using class method and variable\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -45,9 +45,16 @@ namespace employeeWage
                         maxhrANDdays Wage = new maxhrANDdays();
                         Wage.totalWage();
                         break;
+                    case 7:
+
+                        ClassMethod method = new ClassMethod();
+                        method.employeeWage();
+                        break;
 
                 }
             }
         }
     }
 }
+    
+
