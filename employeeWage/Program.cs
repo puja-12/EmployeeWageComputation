@@ -10,6 +10,9 @@ namespace employeeWage
             Console.WriteLine("Welcome to employee wage program!");
             presentORabsent p1 = new presentORabsent();
             p1.present();
+            //Wagecalculation
+            Wagecalculation w1 = new Wagecalculation();
+            w1.calculation();
         }
     }
 }
