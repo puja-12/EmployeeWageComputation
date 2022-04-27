@@ -11,7 +11,7 @@ namespace employeeWage
             while (true)
             {
                 Console.WriteLine("select number\n1)check present or absent\n2)wage computation\n3) " +
-                    "part time wage compuatation\n4) using switch case\n5 Monthlywage\n)6 maxhrANDdays\n7 employee Wage using class method and variable\n");
+                    "part time wage compuatation\n4) using switch case\n5 Monthlywage\n)6 maxhrANDdays\n7 employee Wage using class method and variable\n8)wage for multiple companies");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -49,6 +49,13 @@ namespace employeeWage
 
                         ClassMethod method = new ClassMethod();
                         method.employeeWage();
+                        break;
+                    case 8:
+                       
+                        WageforComp total = new();
+                        total.salary("abc", 20, 20, 100);
+                        total.salary("xyz", 18, 21, 80);
+                        total.salary("pqr", 19, 24, 90);
                         break;
 
                 }
