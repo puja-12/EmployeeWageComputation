@@ -13,7 +13,7 @@ namespace employeeWage
                 Console.WriteLine("select number\n1)check present or absent\n2)wage computation\n3) " +
                     "part time wage compuatation\n4) using switch case\n5) Monthlywage\n6)" +
                     " maxhrANDdays\n7) employee Wage using class method and variable\n" +
-                    "8)wage for multiple companies\n9)total wage for each company");
+                    "8)wage for multiple companies\n9)total wage for each company\n10)different Empwages for different companies");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -67,6 +67,14 @@ namespace employeeWage
                         total2.salary();
                         Console.WriteLine(total2.ToString());
                         break;
+                    case 10:
+                        EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+                        empWageBuilder.addCompanyEmpWage("Wipro", 20, 2, 10);
+                        empWageBuilder.addCompanyEmpWage("TCS", 10, 4, 20);
+                        empWageBuilder.computeEmpWage();
+                        break;
+
+                       
 
                 }
             }
