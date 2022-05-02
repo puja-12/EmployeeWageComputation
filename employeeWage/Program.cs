@@ -68,7 +68,7 @@ namespace employeeWage
                         Console.WriteLine(total2.ToString());
                         break;
                     case 10:
-                        EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+                        EmpWageBuilder empWageBuilder = new EmpWageBuilder();
                         empWageBuilder.addCompanyEmpWage("Wipro", 20, 2, 10);
                         empWageBuilder.addCompanyEmpWage("TCS", 10, 4, 20);
                         empWageBuilder.computeEmpWage();
