@@ -69,12 +69,15 @@ namespace employeeWage
                         break;
                     case 10:
                         EmpWageBuilder empWageBuilder = new EmpWageBuilder();
-                        empWageBuilder.addCompanyEmpWage("Wipro", 20, 2, 10);
-                        empWageBuilder.addCompanyEmpWage("TCS", 10, 4, 20);
-                        empWageBuilder.computeEmpWage();
+                        empWageBuilder.addCompanyEmpWage("Amazon", 20, 5, 100);
+                        empWageBuilder.addCompanyEmpWage("Bridge Labs", 25, 5, 120);
+                        empWageBuilder.ComputeEmpWage();
+                        Console.Write("Total wage for company Amazon :");
+                        empWageBuilder.getTotalWage("Amazon");
+                        Console.WriteLine("\n");
                         break;
 
-                       
+
 
                 }
             }
