@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace employeeWage
 {
+    public interface IComputeEmpWage
+    {
+        public void computeEmpWage();
+        public void addCompanyEmpWage(string company, int empRatePerHour, int numOfworkingDays, int maxHoursPerMonth);
+
+    }
     public class CompanyEmpWage
     {
         public string company;
         public int empRatePerHour;
         public int numOfworkingDays;
-
         public int maxHoursPerMonth;
-
         public int totalEmpWage;
 
 
@@ -33,10 +37,11 @@ namespace employeeWage
             return "Total Employee Wage for Company : " + this.totalEmpWage;
         }
     }
-        public class  EmpWageBuilderArray
+    public class EmpWageBuilderArray : IComputeEmpWage
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
+
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
 
@@ -81,13 +86,9 @@ namespace employeeWage
                         break;
                 }
                 totalempHrs += empHrs;
-               
-               // Console.WriteLine("Days:" + totalWorkingDays+ "Emp Hrs:" + empHrs);
+                Console.WriteLine("Working Day : " + totalWorkingDays + " and Employee hours per day : " + empHrs);
             }
             return totalempHrs * companyEmpWage.empRatePerHour;
         }
     }
-        
-    
-    
 }
